@@ -1,8 +1,10 @@
 package com.example.SpringBootRestfulWs.entities;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 @Entity
+@JsonPropertyOrder({ "id", "name", "email", "password", "city" })
 @Table
 public class User {
     @Id
